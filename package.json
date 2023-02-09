@@ -29,9 +29,9 @@
   },
   "devDependencies": {
     "danger": "^10.6.6",
-    "lodash": "^4.17.21",
     "eslint": "^7.0.0",
     "jest": "^26.1.0",
+    "lodash": "^4.17.21",
     "strip-ansi": "^7.0.0",
     "strip-ansi-cli": "^3.0.0",
     "ts-node": "^10.4.0",
@@ -49,6 +49,7 @@
     "ncp": "^2.0.0",
     "near-api-js": "^0.44.2",
     "near-seed-phrase": "^0.2.0",
+    "node-global-proxy": "^1.0.1",
     "open": "^8.0.7",
     "rimraf": "^3.0.0",
     "stoppable": "^1.1.0",

@@ -1,4 +1,22 @@
 #!/usr/bin/env node
+/*
+read proxy from environment variables
+export https_proxy=YOUR_PROXY 
+export http_proxy=YOUR_PROXY
+*/
+if (process.env.https_proxy || process.env.http_proxy) {
+   var config = {}
+   if(process.env.https_proxy) {
+       config.https = process.env.https_proxy
+   }
+   if(process.env.http_proxy) {
+       config.http = process.env.http_proxy
+   }
+   const proxy = require("node-global-proxy").default;
+   proxy.setConfig(config);
+   proxy.start();
+}
+
 const flaggedRespawn = require('flagged-respawn');
 require('v8flags')((e, flags) => {
     if (e) {
